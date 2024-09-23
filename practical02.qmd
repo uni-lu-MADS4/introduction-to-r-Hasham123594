@@ -1,6 +1,6 @@
 ---
 title: "Getting started with R"
-author: Your name here
+author: Muhammad Hasham
 date: today
 format: html
 ---
@@ -12,6 +12,8 @@ format: html
 ```{r}
 # Your answer in code
 
+letters_vec <- c("A", "B", "C")
+
 ```
 > Your answer as text
 
@@ -20,6 +22,7 @@ format: html
 * Assign the vector to a variable `my_letters`
 ```{r}
 # Your answer in code
+my_letters <- letters_vec
 
 ```
 
@@ -27,7 +30,7 @@ format: html
 * Check the what happens when you run `letters` (just this) on the command line.
 ```{r}
 # Your answer in code
-
+letters
 ```
 
 > Your answer as text
@@ -37,7 +40,7 @@ format: html
 * What happens when you concatenate two vectors? Add `c(my_letters , my_letters)`
 ```{r}
 # Your answer in code
-
+c(my_letters,my_letters)
 
 ```
 
@@ -48,6 +51,10 @@ format: html
 * Add the number 1 to letters. What happens to the type of the vector?
 ```{r}
 # Your answer in code
+letters_vec <- c("A", "B", "C")
+new_vec <- c(letters_vec, 1)
+new_vec
+
 
 
 ```
@@ -66,6 +73,14 @@ format: html
 ```{r}
 # Your answer in code
 
+my_vec <- c(1:8)
+my_vec2 <- my_vec +2
+my_vec2
+
+vec <- c(1,2,3,4)
+
+final <- vec + my_vec
+final
 
 
 
@@ -96,9 +111,20 @@ format: html
 ```{r}
 # Your answer in code
 
+matrix(c(4, 9, 10, 1, 5, 7), nrow = 3, ncol = 2)
 
+A <- matrix(c(4, 9, 10, 1, 5, 7), nrow = 3, ncol = 2)
+A
+dimention <- dim(A)
+dimention
 
+extract5 <- A[2,2]
+extract5
 
+new_col <- c(0,0,0)
+
+update_matrix <- cbind(A,new_col)
+update_matrix
 
 
 ```
