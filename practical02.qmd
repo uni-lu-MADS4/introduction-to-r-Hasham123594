@@ -123,10 +123,16 @@ extract5
 
 new_col <- c(0,0,0)
 
-update_matrix <- cbind(A,new_col)
+update_matrix <- cbind(A,c(0,0,0))
+print(update_matrix)
+
+update_matrix[1,1] <-0
+
 update_matrix
 
+transposed_matrix <- t(update_matrix)
 
+transposed_matrix
 ```
 
 
@@ -134,11 +140,21 @@ update_matrix
 ```{r}
 # Your answer in code
 
+any_larger_than_10 <- any(A > 10)
+
+
+print(any_larger_than_10)
+  
+
 ```
 
 9. Are all values in `A` smaller than 10?
 ```{r}
 # Your answer in code
+any_smaller_than_10 <- any(A < 10)
+
+
+print(any_smaller_than_10)
 
 ```
 
