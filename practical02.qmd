@@ -171,11 +171,13 @@ sum <- function(a,b){
   
   if(is.na(a_num) | is.na(b_num)){
     return(" any number is not numeric")
-    
-  return(a_num+b_num)
   }
+  return(a_num + b_num)
+  
 }
 print(sum(2,3))
+print(sum("2","3"))
+print(sum("2","abc"))
 
 
 
@@ -191,6 +193,22 @@ print(sum(2,3))
 ```{r}
 # Your answer in code
 
+code_mms <- function(x){
+  if(is.numeric(c)){
+    return("number should be numeric form")
+  }
+  
+  mean_value<- mean(x,na.rm =TRUE)
+  median_value <- median(x,na.rm = TRUE)
+  standard_value <- sd(x,na.rm = TRUE)
+  
+  return(list(mean_value,median_value,standard_value))
+}
+
+data <-c(10,20,30,40,50)
+result <- code_mms(data)
+print(result)
+
 
 
 ```
@@ -203,8 +221,17 @@ The output of `c('1' , "a", NA, "2", NA)` should be 2.
 ```{r}
 # Your answer in code
 
+library(dplyr)
+ 
+
+data <- c('1',"2",NA,"2",NA)
+
+nas<- data %>%
+  is.na() %>%
+  base::sum()
 
 
+print(nas)
 ```
 
 
