@@ -165,6 +165,18 @@ print(any_smaller_than_10)
 ```{r}
 # Your answer in code
 
+sum <- function(a,b){
+  a_num <- as.numeric(a)
+  b_num <- as.numeric(b)
+  
+  if(is.na(a_num) | is.na(b_num)){
+    return(" any number is not numeric")
+    
+  return(a_num+b_num)
+  }
+}
+print(sum(2,3))
+
 
 
 
